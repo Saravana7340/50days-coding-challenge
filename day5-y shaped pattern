@@ -1,0 +1,32 @@
+#User function Template for python3
+
+class Solution:
+    def yShapedPattern(self, N):
+        # code here
+        s=N//2
+        for i in range(N):
+            if (i<s):
+                for j in range(N+1):
+                    if (i==j or j==N-i):
+                        print("*",end="")
+                    else:
+                        print(" ",end="")
+                print()
+            else:
+                for j in range(0,N//2):
+                    print(" ",end="")
+                print("*",end="")
+                print()
+        print()    
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__': 
+    t = int (input ())
+    for _ in range (t):
+        N=int(input())
+        
+        ob = Solution()
+        print(ob.yShapedPattern(N))
+# } Driver Code Ends
