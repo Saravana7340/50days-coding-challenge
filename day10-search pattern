@@ -1,0 +1,18 @@
+#User function Template for python3
+
+class Solution:
+    def search(self, patt, s):
+        # code here
+        ans=[]
+        index=0
+        while index<len(s):
+            index=s.find(patt,index)
+            if index==-1:
+                break
+            ans.append(index+1)
+            index+=1
+        if ans:
+            return ans
+        else:
+            ans.append(-1)
+            return ans
