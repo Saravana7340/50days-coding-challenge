@@ -1,0 +1,31 @@
+#User functiEndson Template for python3
+
+class Solution:
+    def rotateMatrix(self,N,M,K,Mat):
+        #code here
+        for i in range(N):
+            for j in range(K):
+                c=Mat[i].pop(0)
+                Mat[i].append(c)
+        return Mat
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+import math
+        
+if __name__=='__main__':
+    t=int(input())
+    for _ in range(t):
+        N,M,K=map(int,input().strip().split(" "))
+        Mat=[]
+        for i in range(N):
+            Mat.append(list(map(int,input().strip().split(" "))))
+        ob=Solution()
+        ans=ob.rotateMatrix(N,M,K,Mat)
+        for i in range(N):
+            for j in range(M):
+                print(ans[i][j],end=" ")
+            print()    
+# } Driver Code 
