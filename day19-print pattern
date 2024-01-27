@@ -1,0 +1,34 @@
+#User function Template for python3
+
+class Solution:
+    def pattern(self, N):
+        # code here
+        arr=[]
+        if N==0:
+            arr.append(N)
+            return arr
+        t=N
+        arr.append(N)
+        while t>0:
+            t-=5
+            arr.append(t)
+        a=arr[-2::-1]
+        for i in a:
+            arr.append(i)
+        return arr
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        N = int(input())
+        
+        ob = Solution()
+        ans = ob.pattern(N)
+        for i in ans:
+            print(i, end = " ")
+        print()
+# } Driver Code Ends
