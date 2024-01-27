@@ -1,0 +1,13 @@
+#User function Template for python3
+
+class Solution:
+    def minRow(self,N,M,A):
+        #code here
+        mini=M
+        minid=0
+        for i in range(N):
+            c=A[i].count(1)
+            if mini>c:
+                mini=c
+                minid=i
+        return minid+1
